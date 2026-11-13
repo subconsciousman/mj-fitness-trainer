@@ -1,0 +1,696 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101010">
+  <meta name="description" content="Personal training in Chennai. Explore training options, pricing and get in touch with Mohamed Jalal on WhatsApp.">
+  <title>Mohamed Jalal | Personal Trainer Chennai</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#ff5a1f',
+            dark: '#101010',
+            panel: '#191919'
+          },
+          fontFamily: {
+            heading: ['Barlow Condensed', 'sans-serif'],
+            body: ['DM Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: #101010; }
+    .heading { font-family: 'Barlow Condensed', sans-serif; }
+    .hero-bg {
+      background:
+        linear-gradient(90deg, rgba(10,10,10,.98) 0%, rgba(10,10,10,.85) 48%, rgba(10,10,10,.25) 100%),
+        url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=80') center/cover;
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .orange-line { width: 55px; height: 4px; background: #ff5a1f; }
+    .service-card { transition: .3s ease; }
+    .service-card:hover {
+      transform: translateY(-7px);
+      border-color: #ff5a1f;
+    }
+    .btn-primary { transition: .25s ease; }
+    .btn-primary:hover {
+      background: #e84712;
+      transform: translateY(-2px);
+    }
+    input, select, textarea { color-scheme: dark; }
+    input:focus, select:focus, textarea:focus {
+      outline: 1px solid #ff5a1f;
+      border-color: #ff5a1f !important;
+    }
+    ::selection { background: #ff5a1f; color: white; }
+  </style>
+</head>
+
+<body class="text-white font-body">
+
+<!-- NAVIGATION -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-lg border-b border-white/10">
+  <nav class="max-w-7xl mx-auto px-5 md:px-8 h-20 flex items-center justify-between">
+    <a href="#" class="heading text-3xl font-extrabold uppercase tracking-wide">
+      MJ<span class="text-accent">.</span>
+      <span class="block text-[9px] tracking-[4px] text-gray-400 font-body">PERSONAL TRAINING</span>
+    </a>
+
+    <div class="hidden md:flex items-center gap-8 text-sm text-gray-300">
+      <a href="#about" class="hover:text-accent">About</a>
+      <a href="#services" class="hover:text-accent">Training</a>
+      <a href="#pricing" class="hover:text-accent">Pricing</a>
+      <a href="#faq" class="hover:text-accent">FAQ</a>
+    </div>
+
+    <a id="navWhatsApp" href="#" target="_blank"
+       class="bg-accent px-5 py-3 rounded font-bold text-sm hover:bg-orange-600 transition">
+      Let's Talk ↗
+    </a>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero-bg min-h-[760px] md:min-h-[850px] flex items-center pt-24">
+  <div class="max-w-7xl mx-auto w-full px-5 md:px-8 py-20">
+    <div class="max-w-3xl reveal">
+      <div class="flex items-center gap-3 mb-7">
+        <span class="orange-line"></span>
+        <span class="uppercase tracking-[3px] text-xs font-bold text-accent">Personal Training · Chennai</span>
+      </div>
+
+      <h1 class="heading uppercase font-black text-6xl sm:text-7xl md:text-8xl lg:text-[110px] leading-[.91]">
+        BUILD YOUR<br>
+        <span class="text-accent">STRONGER</span><br>
+        SELF.
+      </h1>
+
+      <p class="text-gray-300 text-base md:text-lg leading-8 mt-8 max-w-xl">
+        Your fitness journey deserves a plan. Explore personal training options designed around your goals, schedule and preferences.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 mt-9">
+        <a href="#contact" class="btn-primary bg-accent text-white font-bold px-8 py-4 rounded text-center">
+          START YOUR FITNESS JOURNEY →
+        </a>
+        <a id="heroWhatsApp" href="#" target="_blank"
+           class="border border-white/40 hover:border-accent px-8 py-4 rounded font-bold text-center transition">
+          CHAT ON WHATSAPP
+        </a>
+      </div>
+
+      <div class="flex flex-wrap gap-8 mt-12 pt-8 border-t border-white/20">
+        <div>
+          <p class="heading text-3xl font-bold">01</p>
+          <p class="text-gray-400 text-xs uppercase tracking-wider mt-1">Personal approach</p>
+        </div>
+        <div>
+          <p class="heading text-3xl font-bold">02</p>
+          <p class="text-gray-400 text-xs uppercase tracking-wider mt-1">Training options</p>
+        </div>
+        <div>
+          <p class="heading text-3xl font-bold">03</p>
+          <p class="text-gray-400 text-xs uppercase tracking-wider mt-1">Goal focused</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section id="about" class="py-24 px-5 md:px-8 bg-[#151515]">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+    <div class="reveal">
+      <div class="orange-line mb-6"></div>
+      <p class="text-accent text-xs tracking-[3px] font-bold uppercase">Your fitness starts here</p>
+      <h2 class="heading uppercase text-5xl md:text-7xl font-extrabold leading-none mt-4">
+        TRAIN WITH<br> A PURPOSE.
+      </h2>
+      <p class="text-gray-400 leading-8 mt-7">
+        Fitness is more than just lifting weights. It is about understanding your goals, building consistency and finding a training approach that works for you.
+      </p>
+      <p class="text-gray-400 leading-8 mt-4">
+        Connect with Mohamed Jalal to discuss your fitness goals and explore available personal training options in Chennai.
+      </p>
+      <a href="#contact" class="inline-block mt-8 text-accent font-bold border-b border-accent pb-2">
+        DISCUSS YOUR GOALS →
+      </a>
+    </div>
+
+    <div class="relative reveal">
+      <img
+        src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=80"
+        alt="Strength training at a gym"
+        loading="lazy"
+        class="w-full h-[430px] object-cover rounded-sm grayscale hover:grayscale-0 transition duration-500">
+      <div class="absolute -bottom-5 -left-3 bg-accent p-5 md:p-7">
+        <p class="heading text-3xl font-bold uppercase">Your Goals.</p>
+        <p class="heading text-3xl font-bold uppercase">Your Journey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="py-24 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center reveal">
+      <p class="text-accent uppercase tracking-[3px] text-xs font-bold">The right approach</p>
+      <h2 class="heading text-5xl md:text-7xl font-extrabold uppercase mt-4">
+        MORE THAN JUST A WORKOUT
+      </h2>
+      <p class="text-gray-400 mt-5 max-w-xl mx-auto leading-7">
+        Make your training experience purposeful, structured and aligned with your personal fitness goals.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-14">
+      <div class="bg-panel border border-white/10 p-7 reveal service-card">
+        <span class="text-accent text-4xl">01</span>
+        <h3 class="heading text-3xl uppercase font-bold mt-7">Goal Focus</h3>
+        <p class="text-gray-400 text-sm leading-7 mt-3">Start by identifying what you want to achieve from your fitness journey.</p>
+      </div>
+
+      <div class="bg-panel border border-white/10 p-7 reveal service-card">
+        <span class="text-accent text-4xl">02</span>
+        <h3 class="heading text-3xl uppercase font-bold mt-7">Personal Attention</h3>
+        <p class="text-gray-400 text-sm leading-7 mt-3">Explore a training approach that considers your individual needs.</p>
+      </div>
+
+      <div class="bg-panel border border-white/10 p-7 reveal service-card">
+        <span class="text-accent text-4xl">03</span>
+        <h3 class="heading text-3xl uppercase font-bold mt-7">Consistency</h3>
+        <p class="text-gray-400 text-sm leading-7 mt-3">Build a realistic routine that fits into your everyday schedule.</p>
+      </div>
+
+      <div class="bg-panel border border-white/10 p-7 reveal service-card">
+        <span class="text-accent text-4xl">04</span>
+        <h3 class="heading text-3xl uppercase font-bold mt-7">Progress</h3>
+        <p class="text-gray-400 text-sm leading-7 mt-3">Keep your fitness goals in focus as you work towards improvement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAINING SERVICES -->
+<section id="services" class="py-24 bg-[#151515] px-5 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="reveal">
+      <p class="text-accent uppercase tracking-[3px] text-xs font-bold">Training options</p>
+      <h2 class="heading text-5xl md:text-7xl font-extrabold uppercase mt-4">
+        FIND YOUR TRAINING STYLE.
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-14">
+      <article class="service-card bg-[#202020] border border-white/10 overflow-hidden reveal">
+        <img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=800&q=80"
+             alt="Gym strength training" loading="lazy" class="w-full h-60 object-cover">
+        <div class="p-7">
+          <p class="text-accent text-xs font-bold tracking-widest">01 / GYM</p>
+          <h3 class="heading text-4xl font-bold uppercase mt-3">Gym Training</h3>
+          <p class="text-gray-400 text-sm leading-7 mt-4">
+            Explore personal training sessions in a gym environment.
+          </p>
+          <a href="#contact" class="inline-block text-accent text-sm font-bold mt-6">ENQUIRE NOW →</a>
+        </div>
+      </article>
+
+      <article class="service-card bg-[#202020] border border-white/10 overflow-hidden reveal">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80"
+             alt="Personal fitness coaching" loading="lazy" class="w-full h-60 object-cover">
+        <div class="p-7">
+          <p class="text-accent text-xs font-bold tracking-widest">02 / PERSONAL</p>
+          <h3 class="heading text-4xl font-bold uppercase mt-3">One-to-One</h3>
+          <p class="text-gray-400 text-sm leading-7 mt-4">
+            Discuss individual training requirements and personal attention.
+          </p>
+          <a href="#contact" class="inline-block text-accent text-sm font-bold mt-6">ENQUIRE NOW →</a>
+        </div>
+      </article>
+
+      <article class="service-card bg-[#202020] border border-white/10 overflow-hidden reveal">
+        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80"
+             alt="Home workout fitness" loading="lazy" class="w-full h-60 object-cover">
+        <div class="p-7">
+          <p class="text-accent text-xs font-bold tracking-widest">03 / FLEXIBLE</p>
+          <h3 class="heading text-4xl font-bold uppercase mt-3">Home Training</h3>
+          <p class="text-gray-400 text-sm leading-7 mt-4">
+            Enquire about independent home training options and availability.
+          </p>
+          <a href="#contact" class="inline-block text-accent text-sm font-bold mt-6">ENQUIRE NOW →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="py-24 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center reveal">
+      <p class="text-accent uppercase tracking-[3px] text-xs font-bold">Training investment</p>
+      <h2 class="heading text-5xl md:text-7xl font-extrabold uppercase mt-4">
+        UNDERSTAND THE PRICING.
+      </h2>
+      <p class="text-gray-400 mt-5 max-w-2xl mx-auto leading-7">
+        Explore general personal training price ranges in Chennai. Actual fees depend on the trainer, location, session format and package.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-14">
+
+      <div class="bg-panel border border-white/10 p-8 reveal">
+        <p class="text-gray-400 text-xs tracking-widest font-bold">ENTRY LEVEL</p>
+        <h3 class="heading text-3xl font-bold uppercase mt-4">Basic / Floor</h3>
+        <p class="heading text-4xl font-bold text-accent mt-7">₹300 – ₹1,000</p>
+        <p class="text-gray-500 text-xs mt-2">Per hour / session</p>
+        <div class="h-px bg-white/10 my-7"></div>
+        <p class="text-gray-400 text-sm leading-7">General gym floor supervision and basic training support.</p>
+      </div>
+
+      <div class="bg-[#242424] border-2 border-accent p-8 relative reveal">
+        <span class="absolute top-0 right-0 bg-accent px-4 py-2 text-xs font-bold">MID LEVEL</span>
+        <p class="text-gray-400 text-xs tracking-widest font-bold">PERSONAL TRAINING</p>
+        <h3 class="heading text-3xl font-bold uppercase mt-4">Mid-Level</h3>
+        <p class="heading text-4xl font-bold text-accent mt-7">₹1,000 – ₹2,500</p>
+        <p class="text-gray-500 text-xs mt-2">Per session</p>
+        <div class="h-px bg-white/10 my-7"></div>
+        <p class="text-gray-400 text-sm leading-7">General reference for individual personal training sessions.</p>
+        <p class="text-white text-sm font-bold mt-4">Monthly: ₹8,000 – ₹18,000</p>
+      </div>
+
+      <div class="bg-panel border border-white/10 p-8 reveal">
+        <p class="text-gray-400 text-xs tracking-widest font-bold">SPECIALIZED</p>
+        <h3 class="heading text-3xl font-bold uppercase mt-4">Expert Level</h3>
+        <p class="heading text-4xl font-bold text-accent mt-7">₹2,500 – ₹5,000+</p>
+        <p class="text-gray-500 text-xs mt-2">Per session</p>
+        <div class="h-px bg-white/10 my-7"></div>
+        <p class="text-gray-400 text-sm leading-7">Specialized, experienced or premium personal training arrangements.</p>
+        <p class="text-white text-sm font-bold mt-4">Monthly: Up to ₹25,000+</p>
+      </div>
+    </div>
+
+    <div class="bg-[#191919] border border-white/10 p-6 mt-7 reveal">
+      <h3 class="font-bold">Independent / Freelance Home Trainers</h3>
+      <p class="text-accent heading text-3xl font-bold mt-2">₹400 – ₹1,000 / hour</p>
+      <p class="text-gray-500 text-sm mt-2">General market reference, not a confirmed service rate.</p>
+    </div>
+
+    <p class="text-center text-gray-500 text-xs mt-7 leading-6">
+      Indicative market ranges supplied for this website. These are not Mohamed Jalal's confirmed service prices. Contact for actual availability and quotations.
+    </p>
+
+    <div class="text-center mt-8">
+      <a href="#contact" class="btn-primary inline-block bg-accent px-9 py-4 rounded font-bold">
+        ASK ABOUT TRAINING FEES →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="py-24 px-5 md:px-8 bg-accent">
+  <div class="max-w-6xl mx-auto text-center reveal">
+    <p class="text-white/80 text-xs tracking-[4px] font-bold uppercase">Your next step starts now</p>
+    <h2 class="heading text-6xl md:text-8xl font-black uppercase leading-none mt-5">
+      READY TO GET<br> STARTED?
+    </h2>
+    <p class="text-white/90 mt-7 max-w-xl mx-auto leading-7">
+      Have questions about personal training? Let's discuss your fitness goals and available options.
+    </p>
+    <a id="bannerWhatsApp" href="#" target="_blank"
+       class="inline-block mt-9 bg-black text-white font-bold px-10 py-5 rounded hover:bg-white hover:text-black transition">
+      CHAT WITH MOHAMED →
+    </a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-24 px-5 md:px-8">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center reveal">
+      <p class="text-accent uppercase text-xs tracking-[3px] font-bold">Need clarity?</p>
+      <h2 class="heading text-5xl md:text-6xl font-extrabold uppercase mt-4">COMMON QUESTIONS.</h2>
+    </div>
+
+    <div class="mt-12 space-y-3 reveal" id="faqList">
+      <div class="faq-item bg-panel border border-white/10 rounded-lg">
+        <button class="faq-question w-full p-5 text-left font-bold flex justify-between gap-4">
+          How do I get started?
+          <span class="text-accent text-xl">+</span>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 text-gray-400 text-sm leading-7">
+          Fill in the enquiry form or contact Mohamed directly on WhatsApp to discuss your requirements.
+        </div>
+      </div>
+
+      <div class="faq-item bg-panel border border-white/10 rounded-lg">
+        <button class="faq-question w-full p-5 text-left font-bold flex justify-between gap-4">
+          How much does personal training cost?
+          <span class="text-accent text-xl">+</span>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 text-gray-400 text-sm leading-7">
+          Pricing depends on your training requirements and arrangement. The pricing section provides general market references, not confirmed personal fees. Contact us for a quotation.
+        </div>
+      </div>
+
+      <div class="faq-item bg-panel border border-white/10 rounded-lg">
+        <button class="faq-question w-full p-5 text-left font-bold flex justify-between gap-4">
+          Can I enquire about home training?
+          <span class="text-accent text-xl">+</span>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 text-gray-400 text-sm leading-7">
+          Yes. Select Home Training in the enquiry form to discuss the location and availability.
+        </div>
+      </div>
+
+      <div class="faq-item bg-panel border border-white/10 rounded-lg">
+        <button class="faq-question w-full p-5 text-left font-bold flex justify-between gap-4">
+          Do I need previous gym experience?
+          <span class="text-accent text-xl">+</span>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 text-gray-400 text-sm leading-7">
+          You can enquire regardless of your current experience. Share your fitness background and goals so the appropriate training options can be discussed.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 bg-[#151515] px-5 md:px-8">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-14">
+
+    <div class="reveal">
+      <p class="text-accent text-xs tracking-[3px] font-bold uppercase">Let's connect</p>
+      <h2 class="heading text-6xl md:text-8xl font-black uppercase leading-none mt-5">
+        LET'S TALK<br> FITNESS.
+      </h2>
+      <p class="text-gray-400 leading-8 mt-7 max-w-md">
+        Tell us a little about your goals. Your enquiry will open directly in WhatsApp so you can continue the conversation.
+      </p>
+
+      <div class="mt-10 space-y-7">
+        <div>
+          <p class="text-gray-500 text-xs uppercase tracking-widest">Personal Trainer</p>
+          <p class="text-xl font-bold mt-2">Mohamed Jalal</p>
+        </div>
+        <div>
+          <p class="text-gray-500 text-xs uppercase tracking-widest">Location</p>
+          <p class="text-xl font-bold mt-2">Chennai, Tamil Nadu</p>
+        </div>
+        <div>
+          <p class="text-gray-500 text-xs uppercase tracking-widest">WhatsApp / Contact</p>
+          <a id="contactNumber" href="#" class="text-xl font-bold text-accent mt-2 inline-block"></a>
+        </div>
+      </div>
+    </div>
+
+    <form id="enquiryForm" class="bg-[#202020] border border-white/10 p-6 md:p-9 rounded-lg reveal">
+      <h3 class="heading text-4xl uppercase font-bold">ENQUIRE NOW</h3>
+      <p class="text-gray-400 text-sm mt-2 mb-8">Complete the details below to start a conversation.</p>
+
+      <div class="space-y-5">
+        <div>
+          <label for="name" class="text-sm text-gray-300 font-semibold">Your Name *</label>
+          <input id="name" required maxlength="80" type="text" placeholder="Enter your name"
+                 class="w-full mt-2 bg-black border border-white/20 rounded px-4 py-4 text-sm">
+        </div>
+
+        <div>
+          <label for="phone" class="text-sm text-gray-300 font-semibold">Your Phone Number *</label>
+          <input id="phone" required type="tel" maxlength="15" placeholder="Enter your number"
+                 class="w-full mt-2 bg-black border border-white/20 rounded px-4 py-4 text-sm">
+        </div>
+
+        <div>
+          <label for="service" class="text-sm text-gray-300 font-semibold">Training Preference *</label>
+          <select id="service" required class="w-full mt-2 bg-black border border-white/20 rounded px-4 py-4 text-sm">
+            <option value="">Select training type</option>
+            <option>Gym Training</option>
+            <option>One-to-One Training</option>
+            <option>Home Training</option>
+            <option>Need Guidance</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="goal" class="text-sm text-gray-300 font-semibold">Your Fitness Goal</label>
+          <select id="goal" class="w-full mt-2 bg-black border border-white/20 rounded px-4 py-4 text-sm">
+            <option value="">Select your goal</option>
+            <option>Weight Management</option>
+            <option>Muscle Building</option>
+            <option>Strength & Fitness</option>
+            <option>General Fitness</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="message" class="text-sm text-gray-300 font-semibold">Additional Message</label>
+          <textarea id="message" rows="3" maxlength="500" placeholder="Tell us more about your requirements..."
+                    class="w-full mt-2 bg-black border border-white/20 rounded px-4 py-4 text-sm"></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary w-full bg-accent py-5 rounded font-bold">
+          SEND ENQUIRY ON WHATSAPP ↗
+        </button>
+        <p class="text-center text-gray-500 text-xs">
+          Your details are used to prepare your WhatsApp enquiry. No website backend is required.
+        </p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-black border-t border-white/10 py-10 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8 items-center">
+    <div class="text-center md:text-left">
+      <a href="#" class="heading text-3xl font-extrabold uppercase">MJ<span class="text-accent">.</span></a>
+      <p class="text-gray-500 text-xs mt-2">Personal Training · Chennai</p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+      <a href="#about" class="hover:text-accent">About</a>
+      <a href="#services" class="hover:text-accent">Training</a>
+      <a href="#pricing" class="hover:text-accent">Pricing</a>
+      <a href="#contact" class="hover:text-accent">Contact</a>
+    </div>
+
+    <div class="text-center md:text-right">
+      <a id="footerWhatsApp" href="#" target="_blank" class="text-accent font-bold text-sm">WHATSAPP ↗</a>
+      <p class="text-gray-600 text-xs mt-3">© <span id="year"></span> Mohamed Jalal. All rights reserved.</p>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto mt-9 pt-6 border-t border-white/10 text-center">
+    <p class="text-gray-500 text-xs">
+      Designed & Developed by
+      <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="text-white font-bold hover:text-accent">
+        MJ Web Solutions
+      </a>
+    </p>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a id="floatingWhatsApp" href="#" target="_blank" aria-label="Chat on WhatsApp"
+   class="fixed bottom-6 right-5 z-40 bg-[#25D366] w-14 h-14 rounded-full shadow-xl flex items-center justify-center hover:scale-110 transition">
+  <svg viewBox="0 0 32 32" fill="white" class="w-7 h-7" aria-hidden="true">
+    <path d="M16 .5A15.4 15.4 0 0 0 2.7 23.7L.6 31.5l8-2.1A15.5 15.5 0 1 0 16 .5zm0 28.2c-2.3 0-4.5-.6-6.5-1.8l-.5-.3-4.8 1.3 1.3-4.7-.3-.5A12.8 12.8 0 1 1 16 28.7zm7-9.6c-.4-.2-2.1-1-2.5-1.1-.3-.1-.6-.2-.8.2-.2.4-.9 1.1-1.1 1.4-.2.2-.4.3-.8.1-.4-.2-1.5-.5-2.9-1.8-1.1-1-1.8-2.1-2-2.5-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7-.1-.2-.8-1.9-1.1-2.6-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.2.8.3 1.4.6 1.9.7.8.3 1.5.2 2 .1.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.5.2-1.7-.1-.1-.4-.2-.8-.4z"/>
+  </svg>
+</a>
+
+<script>
+/* =====================================================
+   BUSINESS CONFIGURATION
+   Edit your business settings here.
+===================================================== */
+
+const CONFIG = {
+  trainerName: "Mohamed Jalal",
+
+  // WhatsApp number: country code + number, no + or spaces.
+  whatsapp: "919500104674",
+
+  location: "Chennai, Tamil Nadu",
+
+  agencyName: "MJ Web Solutions",
+
+  // Replace with your actual agency website or portfolio.
+  agencyURL: "https://github.com/",
+
+  // General market references only.
+  showPricing: true
+};
+
+/* =====================================================
+   WHATSAPP INTEGRATION
+===================================================== */
+
+const whatsappBase = `https://wa.me/${CONFIG.whatsapp}`;
+
+function openWhatsApp(message) {
+  const url = `${whatsappBase}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank", "noopener,noreferrer");
+}
+
+const defaultMessage = `Hello ${CONFIG.trainerName}, I visited your personal training website and would like to know more about your training services.`;
+
+[
+  "navWhatsApp",
+  "heroWhatsApp",
+  "bannerWhatsApp",
+  "footerWhatsApp",
+  "floatingWhatsApp"
+].forEach(id => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.href = `${whatsappBase}?text=${encodeURIComponent(defaultMessage)}`;
+    element.target = "_blank";
+    element.rel = "noopener noreferrer";
+  }
+});
+
+const contactNumber = document.getElementById("contactNumber");
+contactNumber.textContent = `+${CONFIG.whatsapp}`;
+contactNumber.href = whatsappBase;
+
+/* =====================================================
+   ENQUIRY FORM
+===================================================== */
+
+document.getElementById("enquiryForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const service = document.getElementById("service").value;
+  const goal = document.getElementById("goal").value || "Not specified";
+  const message = document.getElementById("message").value.trim() || "No additional message";
+
+  if (!name || !phone || !service) {
+    alert("Please complete all required fields.");
+    return;
+  }
+
+  const phoneDigits = phone.replace(/\D/g, "");
+  if (phoneDigits.length < 7 || phoneDigits.length > 15) {
+    alert("Please enter a valid phone number.");
+    return;
+  }
+
+  const whatsappMessage =
+`Hello ${CONFIG.trainerName}!
+
+I would like to enquire about personal training.
+
+Name: ${name}
+Phone: ${phone}
+Training Preference: ${service}
+Fitness Goal: ${goal}
+
+Additional Message:
+${message}
+
+Please share the available options and details.
+
+Thank you!`;
+
+  openWhatsApp(whatsappMessage);
+});
+
+/* =====================================================
+   FAQ ACCORDION
+===================================================== */
+
+document.querySelectorAll(".faq-question").forEach(button => {
+  button.addEventListener("click", () => {
+    const answer = button.nextElementSibling;
+    const isOpen = !answer.classList.contains("hidden");
+
+    document.querySelectorAll(".faq-answer").forEach(item => {
+      item.classList.add("hidden");
+    });
+
+    document.querySelectorAll(".faq-question span").forEach(item => {
+      item.textContent = "+";
+    });
+
+    if (!isOpen) {
+      answer.classList.remove("hidden");
+      button.querySelector("span").textContent = "−";
+    }
+  });
+});
+
+/* =====================================================
+   SCROLL REVEAL ANIMATIONS
+===================================================== */
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(".reveal").forEach(element => {
+  observer.observe(element);
+});
+
+/* =====================================================
+   FOOTER & OPTIONAL SETTINGS
+===================================================== */
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+if (!CONFIG.showPricing) {
+  document.getElementById("pricing").style.display = "none";
+}
+
+document.querySelectorAll('a[href="#"]').forEach(link => {
+  if (link.id === "navWhatsApp" ||
+      link.id === "heroWhatsApp" ||
+      link.id === "bannerWhatsApp" ||
+      link.id === "footerWhatsApp" ||
+      link.id === "floatingWhatsApp") return;
+  link.addEventListener("click", e => {
+    if (link.getAttribute("href") === "#") e.preventDefault();
+  });
+});
+</script>
+
+</body>
+</html>
